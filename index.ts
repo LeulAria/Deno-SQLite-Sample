@@ -1,5 +1,5 @@
 import { Application, Context } from "https://deno.land/x/abc@v1.3.1/mod.ts";
-import { initDB } from './DB/index.ts'
+import { initDB, db } from './DB/index.ts'
 import { getAllBooks, getBook, createBook, deleteBook } from "./controllers/bookController.ts";
 
 const app = new Application();
@@ -13,3 +13,5 @@ app
 
 const PORT = 4000;
 app.start({ port: PORT });
+
+db.close()
