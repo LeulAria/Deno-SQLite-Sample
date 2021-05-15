@@ -1,0 +1,44 @@
+// // READING FROM FILE
+// const decoder = new TextDecoder();
+// const data = await Deno.readFile("README.md")
+// console.log(decoder.decode(data));
+
+// const mdtext = await Deno.readTextFile("README.md")
+// console.log(mdtext)
+
+// // Writing to a file
+// const encoder = new TextEncoder();
+// const text = encoder.encode("hello from DENO SIDE!")
+// await Deno.writeFile("readme.txt", text)
+// console.log("DONE!")
+
+// // Rename a file
+// await Deno.rename("readme.txt", "deleteme.txt")
+
+// // Delete a file 
+// await Deno.remove("deleteme.txt")
+
+
+// FETCH API
+// const post = await fetch('https://jsonplaceholder.typicode.com/todos')
+// const data = await post.json()
+// console.log(data);
+
+// CREATING A BASIC SERVER
+// import { serve } from "https://deno.land/std@0.96.0/http/server.ts";
+
+// const server = serve({ port: 8080 });
+
+// for await (const req of server) {
+//   console.log(req)
+//   req.respond({ body: "Hello Welcome to deno." })
+// }
+
+
+// SERVE STATIC FILE
+
+// app.static("/", "./public")
+
+// app.get("/", async (ctx: Context) => {
+//   await ctx.file("./public/index.html");
+// })
